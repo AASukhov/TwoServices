@@ -1,5 +1,3 @@
-CREATE SCHEMA IF NOT EXISTS auth_users;
-
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL NOT NULL,
     login VARCHAR(255),
