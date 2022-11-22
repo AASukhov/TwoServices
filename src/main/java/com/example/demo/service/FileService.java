@@ -53,6 +53,14 @@ public class FileService {
         if (!k) {
             throw new NoSuchFileException("File with such name is not exist");
         }
-        return true;
+        return k;
+    }
+
+    public void editFilename (String filename, String newFilename) throws NoSuchFileException{
+        if (searchingForFilename(filename)) {
+
+        }
+        fileRepository.editFilename(filename, newFilename);
+
     }
 }

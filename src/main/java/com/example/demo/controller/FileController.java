@@ -4,6 +4,7 @@ import com.example.demo.exceptions.NoSuchFileException;
 import com.example.demo.model.FileResponse;
 import com.example.demo.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,6 +32,9 @@ public class FileController {
 
     @GetMapping()
     public FileResponse getFile(@RequestParam("filename") String filename) throws NoSuchFileException {
+        if (!fileService.searchingForFilename(filename)){
+            throw new NoSuchFileException("File not exists");
+        }
         return fileService.getByFilename(filename);
     }
 }
