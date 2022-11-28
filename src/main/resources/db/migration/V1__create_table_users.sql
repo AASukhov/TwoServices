@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL NOT NULL,
-    login VARCHAR(255),
+    username VARCHAR(255),
     password VARCHAR(255),
     role VARCHAR(255)
 );
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS files (
     date DATE
 );
 
-INSERT INTO users (login, password, role)
+INSERT INTO users (username, password, role)
 VALUES ('Andrey', '0000', 'ROLE_ADMIN'),
        ('Mikhail', '1111', 'ROLE_USER'),
        ('Petr', '2222', 'ROLE_USER');

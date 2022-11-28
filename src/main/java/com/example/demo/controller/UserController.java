@@ -24,5 +24,4 @@ public class UserController {
         return userService.getJsonUserList();
     }
 
-    @PutMapping()
 }

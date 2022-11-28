@@ -18,10 +18,10 @@ public class User {
 
     @Id
     @Column
-    private int id;
+    private Long id;
 
     @Column
-    private String login;
+    private String username;
 
     @Column
     private String password;
