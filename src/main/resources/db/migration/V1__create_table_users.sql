@@ -13,9 +13,9 @@ CREATE TABLE IF NOT EXISTS files (
 );
 
 INSERT INTO users (username, password, role)
-VALUES ('Andrey', '0000', 'ROLE_ADMIN'),
-       ('Mikhail', '1111', 'ROLE_USER'),
-       ('Petr', '2222', 'ROLE_USER');
+VALUES ('Andrey', '0000', 'ADMIN'),
+       ('Mikhail', '1111', 'USER'),
+       ('Petr', '2222', 'USER');
 
 INSERT INTO files (filename, size, date)
 VALUES ('Readme.txt',1024,'2022-03-11'),
